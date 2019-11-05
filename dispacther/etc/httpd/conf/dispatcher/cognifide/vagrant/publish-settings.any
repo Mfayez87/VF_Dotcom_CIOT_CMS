@@ -1,0 +1,26 @@
+/publish
+{
+    /virtualhosts
+    {
+        "publish-vodciot.vagrant"
+        "publish-vodcom.vagrant"
+        "demo-publish-vodciot.vagrant"
+        "demo-publish-vodcom.vagrant"
+    }
+
+    /renders
+    {
+        /rend
+        {
+            /hostname "127.0.0.1"
+            /port "4503"
+            /timeout "10000"
+        }
+    }
+
+    $include "../../common/publish/*.any"
+
+    /propagateSyndPost "0"
+}
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

@@ -1,0 +1,8 @@
+greece el_gr
+italy it_it
+germany de_de
+uk en_gb
+spain es_es
+portugal pt_pt
+ireland en_ie
+netherlands nl_nl

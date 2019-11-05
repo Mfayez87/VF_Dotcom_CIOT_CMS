@@ -1,0 +1,25 @@
+/publish
+{
+    /virtualhosts
+    {
+        "eshop-pre.v.vodafone.com"
+        "preprod.vodafone.com"
+        "publish.dispatcher.local"
+    }
+
+    /renders
+    {
+        /rend
+        {
+            /hostname "publish.aem.local"
+            /port "4503"
+            /timeout "10000"
+        }
+    }
+
+    $include "../../common/publish/*.any"
+
+    /propagateSyndPost "0"
+}
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

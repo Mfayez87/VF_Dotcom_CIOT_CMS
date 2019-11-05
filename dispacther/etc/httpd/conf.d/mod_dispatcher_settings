@@ -1,0 +1,38 @@
+# General mod_dispatcher settings
+# -----------------------------------------------------------------------------
+<IfModule disp_apache2.c>
+    DispatcherConfig "/etc/httpd/conf/dispatcher/dispatcher.any"
+    DispatcherLog "/mnt/var/log/httpd/dispatcher.log"
+    DispatcherLogLevel "4"
+    DispatcherDeclineRoot "0"
+    DispatcherUseProcessedURL "1"
+    DispatcherPassError "400-411,413-510"
+    DispatcherKeepAliveTimeout "60"
+</IfModule>
+
+# General mod_dispatcher settings
+# -----------------------------------------------------------------------------
+<Directory /mnt/var/www/html/publish>
+    <IfModule disp_apache2.c>
+        ModMimeUsePathInfo On
+        SetHandler dispatcher-handler
+    </IfModule>
+
+    Options FollowSymLinks IncludesNOEXEC
+    Require all granted
+    AllowOverride None
+    SSILastModified on
+</Directory>
+
+<Directory /mnt/var/www/html/author>
+    <IfModule disp_apache2.c>
+        ModMimeUsePathInfo On
+        SetHandler dispatcher-handler
+    </IfModule>
+
+    Options FollowSymLinks
+    Require all granted
+    AllowOverride None
+</Directory>
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

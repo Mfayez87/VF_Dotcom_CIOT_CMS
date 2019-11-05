@@ -1,0 +1,53 @@
+/cache
+{
+    /docroot "/mnt/var/www/html/publish"
+    /statfileslevel "0"
+    /allowAuthorized "0"
+    /serveStaleOnError "1"
+
+    /rules
+    {
+        # Deny all
+        /0000 { /type "deny" /glob "*" }
+
+        # Content
+        /0010 { /type "allow" /glob "/content/vodafone/*" }
+
+        # Demo Content
+        /0010 { /type "allow" /glob "/content/vodafone-demo/*" }
+
+        # DAM
+        /0020 { /type "allow" /glob "/content/dam/ciot/*" }
+        /0021 { /type "allow" /glob "/content/dam/ciot-demo/*" }
+        /0022 { /type "allow" /glob "/content/dam/vodcom/*" }
+        /0023 { /type "allow" /glob "/content/dam/vodcom-demo/*" }
+        /0024 { /type "allow" /glob "/content/dam/showcase/video/*" }
+
+        # Designs
+        /0030 { /type "allow" /glob "/etc/designs/zg/*" }
+        /0031 { /type "allow" /glob "/etc/designs/zg-placeholders/*" }
+
+        # clientlibs
+        /0100 { /type "allow" /glob "/etc/clientlibs/foundation/*.js" }
+        /0101 { /type "allow" /glob "/etc.clientlibs/clientlibs/foundation/*.js" }
+        /0102 { /type "allow" /glob "/etc.clientlibs/clientlibs/foundation/*.css" }
+        /0103 { /type "allow" /glob "/etc.clientlibs/clientlibs/granite/*.js" }
+        /0104 { /type "allow" /glob "/etc.clientlibs/clientlibs/granite/*.css" }
+        /0105 { /type "allow" /glob "/etc/clientlibs/granite/*.js" }
+        /0106 { /type "allow" /glob "/etc.clientlibs/granite/*.js" }
+        /0107 { /type "allow" /glob "/etc.clientlibs/granite/*.css" }
+        /0108 { /type "deny" /glob "/etc.clientlibs/ciot/*" }
+
+        # Misc JS
+        /0140 { /type "allow" /glob "/etc/segmentation/*.js" }
+        /0141 { /type "allow" /glob "/etc/cloudsettings/*.js" }
+    }
+
+    /invalidate
+    {
+        /0000 { /type "deny" /glob "*" }
+        /0001 { /type "allow" /glob "*.html" }
+    }
+}
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

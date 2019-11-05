@@ -1,0 +1,7 @@
+/name dispatcher
+/farms
+{
+  $include "ams/prod/*.any"
+}
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

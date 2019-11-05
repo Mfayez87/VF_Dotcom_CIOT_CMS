@@ -1,0 +1,22 @@
+/filter
+{
+    # Deny everything
+    /0001 { /type "deny" /glob "*" }
+
+    # Generic rules
+    /0020 { /type "allow" /glob "* /content/*" }
+    /0021 { /type "allow" /glob "* /etc/designs/zg/*" }
+    /0022 { /type "allow" /glob "* /etc/designs/zg-placeholders/*" }
+    /0023 { /type "allow" /glob "* /etc/clientcontext/*" }
+    /0024 { /type "allow" /glob "* /etc/clientlibs/*" }
+    /0025 { /type "allow" /glob "* /etc/cloudsettings/*" }
+    /0026 { /type "allow" /glob "* /etc/segmentation/*" }
+    /0030 { /type "allow" /glob "* /etc.clientlibs/*" }
+
+    # Functional rules
+    /0040 { /type "allow" /glob "* /bin/*" }
+    /0041 { /type "allow" /glob "* /libs/*" }
+    /0042 { /type "allow" /glob "* */logout*" }
+}
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

@@ -1,0 +1,16 @@
+/filter
+{
+    # Allow everything
+    /0001 { /type "allow" /glob "*" }
+
+    # Disable consoles
+    /0010 { /type "deny" /glob "* /system/*" }
+    /0011 { /type "deny" /glob "* /crx/*" }
+    /0012 { /type "deny" /glob "* /admin/*" }
+
+    # Consoles exclusions
+    /0020 { /type "allow" /glob "* /system/sling/logout*" }
+    /0021 { /type "allow"  /glob "* /libs/granite/csrf/token.json" }
+}
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

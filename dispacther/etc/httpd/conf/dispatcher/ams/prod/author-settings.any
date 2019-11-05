@@ -1,0 +1,24 @@
+/author
+{
+    /virtualhosts
+    {
+        "author.eshop.v.vodafone.com"
+        "author.vodafone.com"
+    }
+
+    /renders
+    {
+      /rend
+      {
+            /hostname "author.aem.local"
+            /port "4502"
+            /timeout "10000"
+      }
+    }
+
+    $include "../../common/author/*.any"
+
+    /propagateSyndPost "0"
+}
+
+# vim: ft=apache ts=4 sts=4 sw=4 et

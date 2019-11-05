@@ -1,0 +1,8 @@
+gr el_gr
+it it_it
+de de_de
+uk en_gb
+es es_es
+pt pt_pt
+ie en_ie
+nl nl_nl

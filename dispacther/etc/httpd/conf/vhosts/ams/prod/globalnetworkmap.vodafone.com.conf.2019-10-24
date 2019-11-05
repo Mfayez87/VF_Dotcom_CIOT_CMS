@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+    ServerName https://globalnetworkmap.vodafone.com
+    ServerAlias globalnetworkmap.vodafone.com
+
+    RewriteEngine on
+    RewriteRule ^(.*)$ http://9e6364d6a8b4cdfef251-0ab9e717d4256b25179ccae1d110a95d.r85.cf5.rackcdn.com [R=301,L]
+    Use feature-log globalnetworkmap.vodafone.com
+</VirtualHost>
+
+# vim: ft=apache ts=4 sts=4 sw=4 et
