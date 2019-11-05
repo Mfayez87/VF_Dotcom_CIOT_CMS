@@ -1,1 +1,1 @@
-# VF_Dotcom_CIOT_CMS
+# Vodafone Dotcom and CIoT Dispacther Configuration
